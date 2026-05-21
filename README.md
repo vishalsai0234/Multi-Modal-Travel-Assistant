@@ -81,7 +81,7 @@ travel_assistant/
 │   ├── 1. Paris.png          # Output of city query: Paris
 │   ├── 2. Paris.png
 │   ├── 3. Paris.png 
-│   ├── 4. New Delhi.png      # Output of city query: Paris
+│   ├── 4. New Delhi.png      # Output of city query: New Delhi
 │   ├── 5. New Delhi.png
 │   └── graph.png             # Graph of workflow architecture
 ├── graph/
