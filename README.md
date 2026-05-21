@@ -6,6 +6,42 @@ A LangGraph-powered travel assistant that aggregates city information, weather f
 
 ## 🏗️ Architecture
 
+<img width="225" height="654" alt="graph" src="https://github.com/user-attachments/assets/6843f5a3-fbb3-4fba-a0cf-dc627fc1949f" />
+
+```
+The workflow starts by receiving a user query such as *"Tell me about Tokyo"*.
+
+1. **Extract Node**
+   - The input query is processed and the city name is extracted.
+
+2. **Router Node**
+   - The system checks whether information about the city already exists in the local vector database.
+   - If available, it follows the **Vector Store path**. (ex. Tokyo)
+   - Otherwise, it switches to the **Mock Web Search path**. (ex. Snohomish)
+
+3. **Web Search (if needed)**
+   - For cities not present in local knowledge, a mock search API generates a summary.
+
+4. **Parallel Fetch Node**
+   - Weather information and city images are independent tasks.
+   - To reduce latency, both are fetched simultaneously using `ThreadPoolExecutor`.
+   - This acts as a parallel fan-out stage.
+
+5. **Merge Node**
+   - Information from all sources is combined into a structured output containing:
+     - `city_summary`
+     - `weather_forecast`
+     - `image_urls`
+
+6. **Final Output**
+   - The structured result is displayed using:
+     - text summary
+     - weather visualization
+     - image gallery
+     - routing explanation
+
+This design demonstrates conditional routing, multi-modal data integration, parallel execution, and memory-based workflow orchestration using LangGraph.
+```
 ```
 User Input
     ↓
