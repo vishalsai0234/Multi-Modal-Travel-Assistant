@@ -6,7 +6,7 @@ A LangGraph-powered travel assistant that aggregates city information, weather f
 
 ## 🏗️ Architecture
 
-[Graph Topology] <img width="225" height="654" alt="graph" src="https://github.com/user-attachments/assets/6843f5a3-fbb3-4fba-a0cf-dc627fc1949f" />
+Graph Topology -> <img width="225" height="654" alt="graph" src="https://github.com/user-attachments/assets/6843f5a3-fbb3-4fba-a0cf-dc627fc1949f" />
 
 The workflow starts by receiving a user query such as *"Tell me about Tokyo"*.
 
