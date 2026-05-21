@@ -72,10 +72,10 @@ The graph is compiled with `MemorySaver` checkpointer. Each Streamlit session ge
 
 ```
 travel_assistant/
-├── app.py                    # Streamlit entry point
-├── requirements.txt
-├── generate_graph.py         # Run once to produce graph.png
-├── Travel Assistant.ipynb    # Jupyter Notebook Implementation
+├── app.py                    # Streamlit application entry point
+├── requirements.txt          # Required Python packages
+├── generate_graph.py         # Run once to produce graph.png image
+├── Travel Assistant.ipynb    # Jupyter Notebook implementation
 ├── results/
 │   ├── 0. Home Page.png      # Streamlit homepage
 │   ├── 1. Paris.png          # Output of city query: Paris
