@@ -75,14 +75,15 @@ travel_assistant/
 ├── app.py                    # Streamlit entry point
 ├── requirements.txt
 ├── generate_graph.py         # Run once to produce graph.png
+├── Travel Assistant.ipynb    # Jupyter Notebook Implementation
 ├── results/
-│   ├── 0. Home Page.png          # Streamlit homepage
-│   ├── 1. Paris.png              # Output of city query: Paris
-│   ├── 2. Paris.png              # route_by_source conditional
-│   ├── 3. Paris.png              # TypedDict: TravelState
-│   ├── 4. New Delhi.png          # Output of city query: Paris
-│   ├── 5. New Delhi.png              # route_by_source conditional
-│   └── graph.png                 # Graph of workflow architecture
+│   ├── 0. Home Page.png      # Streamlit homepage
+│   ├── 1. Paris.png          # Output of city query: Paris
+│   ├── 2. Paris.png
+│   ├── 3. Paris.png 
+│   ├── 4. New Delhi.png      # Output of city query: Paris
+│   ├── 5. New Delhi.png
+│   └── graph.png             # Graph of workflow architecture
 ├── graph/
 │   ├── state.py              # TypedDict: TravelState
 │   ├── nodes.py              # All 5 node functions
